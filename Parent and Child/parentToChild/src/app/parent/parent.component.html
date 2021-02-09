@@ -1,0 +1,26 @@
+
+<div class="parent">
+  <h4 style="margin-top: 0;">Parent</h4>
+  <!-- <app-child (hideChild)="receiveMessage1($event)"></app-child> -->
+  Message: {{message}}
+  <div *ngIf="!hide">
+    <app-child-sib></app-child-sib>
+  </div>
+
+    <div class="child">
+      <h4 style="margin-top: 0;">Child</h4>
+      <!-- <app-child [message]="message"></app-child> -->
+      <app-child (messageEvent)="receiveMessage($event)" ></app-child>
+      <app-child (hideChild)="receiveMessage1($event)"></app-child>
+      <!-- <app-child></app-child> -->
+    </div>
+</div>
+
+<div class="sibiling" >
+  <h4 style="margin-top: 0;">Sibiling</h4>
+  <div style="margin-top: 70px;padding: 30px;">
+    <!-- <app-sibilling></app-sibilling> -->
+  </div>
+</div>
+
+
